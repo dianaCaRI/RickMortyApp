@@ -3,7 +3,10 @@ import { createUserWithEmailAndPassword,  } from 'firebase/auth';
 import { auth } from '../firebase-config';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '../firebase-config'
+
 
 
 export default function Register() {
@@ -11,16 +14,19 @@ export default function Register() {
   const [ password, setPassword ] = useState('');
   const navigate = useNavigate();
 
+
   const register = async () => {
     try {
       const user = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(user);
       alert("Account Created")
       navigate('/')
+      console.log(user.user.uid);
+      const docuRef= doc(db, `usuarios/${user.user.uid}`);
+      setDoc(docuRef,{correo:email, rol:"usuario"});
     }catch(error){
       toast.error(error.message);
     }
-   
+     
   }
 
   return (

@@ -4,13 +4,13 @@ import { getFirestore } from "firebase/firestore";
 
 
 export const firebaseConfig= {
-  apiKey: "AIzaSyARwgxOakGeTGGNLOEFHn-0TxPzS9GxDvc",
-  authDomain: "videgamesapp.firebaseapp.com",
-  projectId: "videgamesapp",
-  storageBucket: "videgamesapp.appspot.com",
-  messagingSenderId: "16090400600",
-  appId: "1:16090400600:web:a9f7ec41a47a2161be872d",
-  measurementId: "G-FQKL7T20NY"
+  apiKey: "AIzaSyDZqRnMPTm-4xhys51TEuFPt8BSwOQDd8M",
+  authDomain: "rickapp-1db61.firebaseapp.com",
+  projectId: "rickapp-1db61",
+  storageBucket: "rickapp-1db61.appspot.com",
+  messagingSenderId: "1081939778779",
+  appId: "1:1081939778779:web:c164dd1e71a466ef1780fe",
+  measurementId: "G-17G2YFVKV2"
 };
 
 

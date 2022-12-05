@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Main from './pages/Main'
 import Profile from './pages/Profile'
+import Character from './pages/Character';
 import {useState} from 'react'
 import { onAuthStateChanged } from 'firebase/auth';
 import {auth} from './firebase-config'
@@ -27,6 +28,7 @@ function App() {
       <Route path="/register" element={<Register/>}/>
       <Route path="/main" element={<Main/>}/>
       <Route path="/profile" element={<Profile/>}/>
+      <Route path="/character" element={<Character/>}/>
     </Routes>
     </div>
 
